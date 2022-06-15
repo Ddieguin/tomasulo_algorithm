@@ -4,6 +4,8 @@
 ```bash 
  git clone <https://github.com/Ddieguin/tomasulo_algorithm.git>
 ```
+### Link de explicação e execução do algoritmo
+https://youtu.be/RVF1W_4-DeI
 
 ### Vá para a pasta do projeto
 ```bash
