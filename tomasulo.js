@@ -227,6 +227,7 @@ function updateStateTableUFHTML(ufs) {
 
 function updateStateTableMemHTML(mem) {
     for (var reg in mem) {
+        console.log("reg ", reg)
         $(`#${reg}`).html(mem[reg] ? mem[reg] : "&nbsp;");
     }
 }
@@ -388,6 +389,7 @@ $(document).ready(function() {
         diagram = new State(setup, insts);
         generateStateTableInstructionHTML(diagram);
         updateStateTableHTML(diagram["table"])
+        console.log("Diagram table ", diagram['table'])
         generateStateTableUFHTML(diagram);
         updateStateTableUFHTML(diagram["uf"]);
         generateStateTableMemHTML(diagram);
@@ -410,7 +412,7 @@ $(document).ready(function() {
         updateStateTableHTML(diagram.instructionsState);
         updateStateTableUFMemHTML(diagram.functionalUnitsMemory);
         updateStateTableUFHTML(diagram.functionalUnits);
-        updateStateTableMemHTML(diagram.estacaoRegistradores);
+        updateStateTableMemHTML(diagram.registerStation);
         updateClock(diagram.clock);
 
     });
@@ -424,7 +426,7 @@ $(document).ready(function() {
             updateStateTableHTML(diagram.instructionsState);
             updateStateTableUFMemHTML(diagram.functionalUnitsMemory);
             updateStateTableUFHTML(diagram.functionalUnits);
-            updateStateTableMemHTML(diagram.estacaoRegistradores);
+            updateStateTableMemHTML(diagram.registerStation);
             updateClock(diagram.clock);
         }
     });
